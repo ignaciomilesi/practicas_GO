@@ -1,0 +1,37 @@
+El algoritmo va a encontrar o la solución optima o una muy cercana. No da la mejor solución siempre, si hay valores muy extremos puede dar una solución inferior, funciona mejor si todas las vacas están en valores cercanos. 
+
+####### ---- #######
+
+1. Ordena la lista de vacas producción, de menor a mayor
+
+2. Toma, desde la vaca de menor producción, de forma correlativa hasta la ultima vaca que permita no pasarse del limite
+
+3. De las vacas elegidas, descarta la de mayor peso y prueba seleccionando la vaca de mayor producción no elegida (siempre y cuando la producción sea mayor a la vaca descartada). Si se pasa de peso, elige la siguiente en producción
+
+4. Cuando ya no pueda elegir otra vaca (porque, o se pasa de peso o las disponibles son de menor producción) repito el paso 3 con la vaca que le sigue en peso.
+
+5. Finalizo cuando recorro todas las vacas elegidas
+
+Ejemplo:
+
+Entrada (ordenas por litros) se eligen las primeras 4
+
+n	peso    litro   elegidas
+5	50	    12      *
+6	90	    13      *
+4	180	    28      *
+2	250	    35      *
+1	360	    40
+3	400	    43
+
+Se descarta la vaca de 250Kg, se prueba con la vaca de 400Kg: se pasa de peso, se prueba con la vaca 360Kg: no se pasa, se elige
+
+n	peso    litro   elegidas
+5	50	    12      *
+6	90	    13      *
+4	180	    28      *
+2	250	    35      
+1	360	    40      *
+3	400	    43
+
+Se descarta la vaca de 360Kg, se prueba con la vaca de 400Kg: se pasa de peso, se prueba con la vaca 250Kg: posee menor producción. No quedan vacas por probar, se devuelve la de 360Kg y se descarta la de 180Kg, hago las mismas comprobaciones. Cualquier otra vaca hace que me pase de peso, hago lo mismo con el resto de las vacas elegidas, no hay cambio. Las vacas elegidas son la 1, 4, 5, 6

@@ -1,0 +1,23 @@
+Usted es un empresario ganadero y desea abrir una tienda de leche en la Capital. Como es una persona muy prudente, desea que la leche que venderá sea perfectamente natural y fresca, y por esa razón, va a traer las vacas desde el mercado del campo a la capital. Tiene a su disposición un camión con un cierto límite de peso, y un grupo de vacas disponibles para la venta. Cada vaca puede tener un peso distinto, y producir una cantidad diferente de leche al día.
+
+Su objetivo como empresario es elegir qué vacas comprar y llevar en su camión, de modo que pueda maximizar la producción de leche, observando el límite de peso del camión.
+
+Entrada: 
+    - Número total de vacas del mercado del campo.
+    - Peso total que el camión puede llevar.
+    - Lista de pesos de las vacas, en Kg.
+    - Lista de la producción de leche por vaca, en litros
+    Formato: [cant limitPesoCamion listaPesoVaca listaProducVaca] cada campo separado espacios, las listas separadas por comas
+
+Salida: 
+    - Cuales vacas debe comprar
+    - Cantidad máxima de producción de leche se puede obtener.
+    Formato: [listaVaca producciónLeche]
+
+Ejemplo de entrada:
+    1. 6 700 360,250,400,180,50,90 40,35,43,28,12,13
+    2. 8 1000 223,243,100,200,200,155,300,150 30,34,28,45,31,50,29,15
+    3. 10 2000 340,355,223,243,130,240,260,155,302,130 45,50,34,39,29,40,30,52,31,15
+
+Ejemplo de salida (solo para el caso 1:)
+    1. 1,4,5,6 93L
