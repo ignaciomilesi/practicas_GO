@@ -17,12 +17,13 @@ func (s single) VerIntancia() string {
 // aca voy a guardar la instancia generada
 var singleInstance *single
 
-// el sync.Once... Do() hace que la función que instancea el Struct  ocurra una sola vez
+// el sync.Once... Do() hace que la función solo se ejecute una vez
 var once sync.Once
 
 // el id es para identificar la instancia generada y ver q siempre devuelvo la misma
 func GetInstancia(id int) *single {
 
+	// al hace q la funcion que instancea al struct ocurra solo una vez, siempre devuelvo el mismo struct
 	once.Do(func() {
 		fmt.Println("Generando Instancia")
 		singleInstance = &single{
