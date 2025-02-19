@@ -1,0 +1,8 @@
+mode: set
+test/collatz/calculoSerie.go:5.74,9.19 2 1
+test/collatz/calculoSerie.go:9.19,13.3 3 1
+test/collatz/calculoSerie.go:15.2,15.8 1 1
+test/collatz/collatz.go:3.29,5.2 1 1
+test/collatz/collatz.go:7.40,9.19 1 1
+test/collatz/collatz.go:9.19,12.3 1 1
+test/collatz/collatz.go:12.8,14.3 1 1
