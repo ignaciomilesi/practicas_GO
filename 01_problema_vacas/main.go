@@ -13,7 +13,7 @@ func main() {
 	prueba2 := "8 1000 223,243,100,200,200,155,300,150 30,34,28,45,31,50,29,10"
 	prueba3 := "10 2000 340,355,223,243,130,240,260,155,302,130 45,50,34,39,29,40,30,52,31,15"
 
-	c := make(chan string, 3)
+	c := make(chan string)
 
 	go realizarEleccion("Prueba 1", prueba1, c)
 	go realizarEleccion("Prueba 2", prueba2, c)
