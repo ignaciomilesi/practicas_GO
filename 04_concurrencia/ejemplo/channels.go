@@ -62,4 +62,21 @@ func DeadlockPorDobleenvio() {
 	c <- 10
 
 	time.Sleep(100 * time.Millisecond) //solo para darle tiempo a que se ejecute la goroutine
+
+}
+
+func EvitandoBloqueoChannelConOtroChannel() {
+	dato := make(chan int, 1) //solo se cambia esto
+	finTarea := make(chan bool)
+
+	go func(c_dato chan int, c_finTarea chan bool, numero int) {
+
+		c_dato <- numero
+		fmt.Println("Numero Colocado")
+		c_finTarea <- true
+
+	}(dato, finTarea, 10)
+
+	<-finTarea
+	fmt.Print(<-dato)
 }

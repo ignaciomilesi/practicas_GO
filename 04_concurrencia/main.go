@@ -11,5 +11,11 @@ func main() {
 	//ejemplo.CreandoChannel()
 	//ejemplo.BloqueoChannelConSleep()
 	//ejemplo.BloqueoChannelConOtroChannel()
-	ejemplo.DeadlockPorDobleenvio()
+	//ejemplo.DeadlockPorDobleenvio()
+	//ejemplo.EvitandoBloqueoChannelConOtroChannel()
+	//ejemplo.SemaforoConGoroutine()
+	//ejemplo.Workerpool()
+	//ejemplo.WorkerpoolSinBuffer()
+	//ejemplo.SinnMultiplex()
+	ejemplo.ConMultiplex()
 }
