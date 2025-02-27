@@ -59,11 +59,13 @@ func Test_esPar(t *testing.T) {
 Corremos los test, parándonos en la carpeta donde se encuentra el archivo, con `go test -v` (el `-v` es para que detalle de la corrida, en caso de no colocarlo se mostrara solo si paso o no de forma total)
 
 -Test OK con y sin `-v`:
+
 ![Ok con -v](img/01.png)
 ![Ok sin -v](img/02.png)
 
 
 -Test FAIL con y sin `-v`:
+
 ![FAIL con -v](img/03.png)
 ![FAIL sin -v](img/04.png)
 
